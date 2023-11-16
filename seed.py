@@ -1,5 +1,5 @@
 from app import db
-from models import User, Rating, Image, Message  # , Like
+from models import User, Rating, Image, Message
 
 db.drop_all()
 db.create_all()
@@ -70,17 +70,20 @@ user9 = User.signup(username='test_user9',
                     radius=50)
 
 user10 = User.signup(username='test_user10',
-                    password='password',
-                    hobbies='living away from people',
-                    interests='being alone',
-                    location=60002,
-                    radius=2)
+                     password='password',
+                     hobbies='living away from people',
+                     interests='being alone',
+                     location=60002,
+                     radius=2)
 
 
 db.session.commit()
-image1 = Image.add_image('test_user1', 'Dawid-Planeta-fox.jpg')
-image2 = Image.add_image('test_user1', 'Dawid-Planeta-whale.jpg')
-image3 = Image.add_image('test_user3', 'mem-game2.png')
+image1 = Image.add_image(
+    'test_user1', 'ben-den-engelsen-_mscfMq3kKI-unsplash.jpg')
+image2 = Image.add_image(
+    'test_user1', 'ben-den-engelsen-_mscfMq3kKI-unsplash.jpg')
+image3 = Image.add_image(
+    'test_user3', 'ben-den-engelsen-_mscfMq3kKI-unsplash.jpg')
 
 
 rating1 = Rating.add_rating('test_user1', 'test_user2', True)
@@ -93,7 +96,6 @@ rating7 = Rating.add_rating('test_user7', 'test_user1', True)
 rating8 = Rating.add_rating('test_user8', 'test_user1', True)
 rating9 = Rating.add_rating('test_user9', 'test_user1', True)
 rating10 = Rating.add_rating('test_user10', 'test_user1', True)
-
 
 
 message1 = Message.add_message('test_user1', 'test_user2', 'first post')
