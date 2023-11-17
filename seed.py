@@ -12,7 +12,7 @@ user1 = User.signup(username='test_user1',
                     location=10000,
                     radius=50)
 
-
+# Hannah
 user2 = User.signup(username='test_user2',
                     password='password',
                     hobbies='taking vitamins',
@@ -20,6 +20,7 @@ user2 = User.signup(username='test_user2',
                     location=10002,
                     radius=2)
 
+# Ben
 user3 = User.signup(username='test_user3',
                     password='password',
                     hobbies='base jumping',
@@ -27,20 +28,23 @@ user3 = User.signup(username='test_user3',
                     location=10003,
                     radius=2)
 
+# Louis
 user4 = User.signup(username='test_user4',
                     password='password',
                     hobbies='mountaineering',
-                    interests='testing',
+                    interests='Being a chef',
                     location=10004,
                     radius=2)
 
+# Colin
 user5 = User.signup(username='test_user5',
                     password='password',
                     hobbies='origami',
-                    interests='testing',
+                    interests='Tattooing, hardcore punk',
                     location=10005,
                     radius=50)
 
+# Sasha
 user6 = User.signup(username='test_user6',
                     password='password',
                     hobbies='calligraphy',
@@ -48,10 +52,11 @@ user6 = User.signup(username='test_user6',
                     location=10006,
                     radius=50)
 
+# Vlad
 user7 = User.signup(username='test_user7',
                     password='password',
                     hobbies='juggling',
-                    interests='testing',
+                    interests='Minimalist Design, Daisy UI',
                     location=10007,
                     radius=50)
 
@@ -84,6 +89,20 @@ image2 = Image.add_image(
     'test_user1', 'ben-den-engelsen-_mscfMq3kKI-unsplash.jpg')
 image3 = Image.add_image(
     'test_user3', 'ben-den-engelsen-_mscfMq3kKI-unsplash.jpg')
+image4 = Image.add_image(
+    'test_user4', 'louis-hansel-v3OlBE6-fhU-unsplash.jpg')
+image5 = Image.add_image(
+    'test_user5', 'collins-lesulie-PWK6CeCJtJw-unsplash.jpg')
+image6 = Image.add_image(
+    'test_user5', 'steven-erixon-SBrxqx8Vvhg-unsplash.jpg')
+image7 = Image.add_image(
+    'test_user6', 'roth-melinda-gOdqdhU9pWI-unsplash.jpg')
+image8 = Image.add_image(
+    'test_user7', 'midas-hofstra-a6PMA5JEmWE-unsplash.jpg')
+image9 = Image.add_image(
+    'test_user2', 'hassan-khan-EGVccebWodM-unsplash.jpg')
+image9 = Image.add_image(
+    'test_user2', 'jake-nackos-IF9TK5Uy-KI-unsplash.jpg')
 
 
 rating1 = Rating.add_rating('test_user1', 'test_user2', True)
