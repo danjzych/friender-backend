@@ -86,20 +86,18 @@ db.session.commit()
 image1 = Image.add_image(
     'test_user1', 'ben-den-engelsen-_mscfMq3kKI-unsplash.jpg')
 image2 = Image.add_image(
-    'test_user1', 'ben-den-engelsen-_mscfMq3kKI-unsplash.jpg')
-image3 = Image.add_image(
     'test_user3', 'ben-den-engelsen-_mscfMq3kKI-unsplash.jpg')
-image4 = Image.add_image(
+image3 = Image.add_image(
     'test_user4', 'louis-hansel-v3OlBE6-fhU-unsplash.jpg')
-image5 = Image.add_image(
+image4 = Image.add_image(
     'test_user5', 'collins-lesulie-PWK6CeCJtJw-unsplash.jpg')
-image6 = Image.add_image(
+image5 = Image.add_image(
     'test_user5', 'steven-erixon-SBrxqx8Vvhg-unsplash.jpg')
-image7 = Image.add_image(
+image6 = Image.add_image(
     'test_user6', 'roth-melinda-gOdqdhU9pWI-unsplash.jpg')
-image8 = Image.add_image(
+image7 = Image.add_image(
     'test_user7', 'midas-hofstra-a6PMA5JEmWE-unsplash.jpg')
-image9 = Image.add_image(
+image8 = Image.add_image(
     'test_user2', 'hassan-khan-EGVccebWodM-unsplash.jpg')
 image9 = Image.add_image(
     'test_user2', 'jake-nackos-IF9TK5Uy-KI-unsplash.jpg')
@@ -117,10 +115,23 @@ rating9 = Rating.add_rating('test_user9', 'test_user1', True)
 rating10 = Rating.add_rating('test_user10', 'test_user1', True)
 
 
-message1 = Message.add_message('test_user1', 'test_user2', 'first post')
-message2 = Message.add_message('test_user2', 'test_user1', 'second')
+message1 = Message.add_message(
+    'test_user1', 'test_user2', 'Hey! Do you go to the gym on 6th st? I think I\'ve seen you there a couple times')
+message2 = Message.add_message(
+    'test_user2', 'test_user1', 'Yeah I do! I usually go for the group fitness classes. They are fun but I\'ve been thinking about getting into powerlifting. How long have you been going there?')
 message3 = Message.add_message(
-    'test_user1', 'test_user2', 'how are you doing today?')
+    'test_user1', 'test_user2', 'A couple years?')
+message4 = Message.add_message(
+    'test_user2', 'test_user1', 'Niceee')
+message5 = Message.add_message(
+    'test_user2', 'test_user1', 'Wanna lift together sometime? Could be fun')
+message6 = Message.add_message(
+    'test_user1', 'test_user2', 'Yeah! Let\'s do it')
+message6 = Message.add_message(
+    'test_user2', 'test_user1', 'Also, isn\'t this app awesome? The dude who made this would make a great addition to any engineering team, I bet.')
+
+message8 = Message.add_message(
+    'test_user3', 'test_user1', 'Hey! This app is sick. I bet the guy who made it is awesome.')
 
 
 db.session.commit()
