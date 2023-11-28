@@ -149,10 +149,7 @@ def get_matched_users(username):
 @app.patch('/users/<string:username>')
 def update_user(username):
 
-    print(g.user)
-
     if not g.user or g.user.username != username:
-        print("\n\n\n\n\n\n\n\n\n\n", g.user)
         return jsonify({'error': "unauthorized"}), 404
 
     # get_or_404 as alternative?
@@ -180,7 +177,7 @@ def delete_user(username):
     return jsonify({"deleted": username})
 
 
-# Like/Dislike a user (POST)
+# Like/Dislike a user
 @app.post('/rating')
 def rate_user():
     """Route for one user to like another"""
@@ -238,7 +235,7 @@ def add_message(username):
     if form.validate_on_submit():
         try:
             new_message = Message.add_message(
-                sender=form.sender.data,
+                sender=username,
                 receiver=form.receiver.data,
                 message=form.message.data)
 
@@ -246,6 +243,6 @@ def add_message(username):
 
             return (jsonify({'message': new_message.serialize()}), 201)
         except IntegrityError:
-            return jsonify({'error': 'failed to add message'})
+            return jsonify({'error': 'failed to add message'}), 400
 
-    return jsonify({'error': 'invalid data for adding new message'})
+    return jsonify({'error': 'invalid data'}), 400
