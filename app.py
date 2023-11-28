@@ -31,8 +31,7 @@ def check_for_token():
     """Check for token before each request"""
 
     token = request.headers.get('token')
-
-    # token = request.json.get('token')
+    print(request.headers)
 
     if token:
         payload = jwt.decode(
@@ -74,9 +73,9 @@ def signup():
             db.session.commit()
             return (jsonify({'token': token}), 201)
         except IntegrityError:
-            return jsonify({'error': 'username already taken'})
+            return jsonify({'error': 'username already taken'}), 400
 
-    return jsonify({'error': 'invalid form data'})
+    return jsonify({'error': 'invalid form data'}), 400
 
 
 @app.post('/login')
@@ -93,7 +92,7 @@ def login():
         if token:
             return jsonify({'token': token})
 
-    return jsonify({'error': "Username or password incorrect"})
+    return jsonify({'error': "Username or password incorrect"}), 401
 
 
 ####### User Routes ########
@@ -150,8 +149,11 @@ def get_matched_users(username):
 @app.patch('/users/<string:username>')
 def update_user(username):
 
+    print(g.user)
+
     if not g.user or g.user.username != username:
-        return jsonify({'error': 'unauthorized'})
+        print("\n\n\n\n\n\n\n\n\n\n", g.user)
+        return jsonify({'error': "unauthorized"}), 404
 
     # get_or_404 as alternative?
     user = User.query.get(username)
