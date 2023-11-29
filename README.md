@@ -1,7 +1,5 @@
 <a name="readme-top"></a>
 
-# Friender Frontend
-
 <br />
 <div align="center">
   <a href="https://github.com/danjzych/friender-backend">
