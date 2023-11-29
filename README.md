@@ -31,7 +31,8 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#setup">Setup</a></li>
+        <li><a href="#run">Run App</a></li>
       </ul>
     </li>
     <li><a href="#roadmap">Roadmap</a></li>
